@@ -314,4 +314,15 @@ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
 void UARTTrace(char *BufferPtr);
 
 
+/*
+ * モータ制御
+ */
+/*
+ * 関数		SetMotorPwm		モータへのPWM指令値設定
+ * 引数		m1,m2			モータへのPWM指令（-1000～1000）
+ * 戻値		なし
+ */
+void SetMotorPwm(int m1, int m2);
+
+
 #endif
