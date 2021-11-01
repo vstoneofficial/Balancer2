@@ -59,7 +59,7 @@ int main (void)
 		if(updateVS_C3 == 1){					//MODE_CYCLE[Hz]で実行
 			int length = 0;
 			char str[30];
-			length = sprintf(str,"bodyangle:%.5lf\r\n",&memmap.values.BODY_ANGLE);	//本体角度の文字列は配列に格納
+			length = sprintf(str,"bodyangle:%.5lf\r\n",memmap.values.BODY_ANGLE);	//本体角度の文字列は配列に格納
 			UARTSend((unsigned char*)str,length);									//UARTで送信
 			if(getSW() == 1){			//ボタンが押されたら停止
 				while(getSW() == 1){	//ボタンが離されるのを待つ
